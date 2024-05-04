@@ -1,0 +1,6 @@
+{
+    "name": "pavel/salon-krasoti-php",
+    "require": {
+        "phpoffice/phpspreadsheet": "^1.19"
+    }
+}
