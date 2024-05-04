@@ -108,7 +108,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                 <div class="half">
                     <label for="date_end_work" class="form-label">Дата увольнения</label>
-                    <input type="date" class="form-control" id="date_end_work" name="date_end_work" placeholder="Дата увольнения">
+                    <input type="date" class="form-control" id="date_end_work" name="date_end_work" placeholder="Дата увольнения" value="<?=$record['date_end_work']?>">
                 </div>
             </div>
 
