@@ -20,7 +20,8 @@ $arrNameServiceMaster = sendSqlAndGetData("
         services.name    
     FROM master_service
     INNER JOIN services
-        ON services.id = master_service.service_id  
+        ON services.id = master_service.service_id
+    WHERE master_service.master_id = :id
 ", [
     'id' => $_REQUEST['id']
 ]);
