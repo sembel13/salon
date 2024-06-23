@@ -314,9 +314,9 @@ ALTER TABLE `master_service`
 -- Ограничения внешнего ключа таблицы `records`
 --
 ALTER TABLE `records`
-  ADD CONSTRAINT `records_ibfk_1` FOREIGN KEY (`service_id`) REFERENCES `services` (`id`),
-  ADD CONSTRAINT `records_ibfk_2` FOREIGN KEY (`master_id`) REFERENCES `masters` (`id`),
-  ADD CONSTRAINT `records_ibfk_3` FOREIGN KEY (`client_id`) REFERENCES `clients` (`id`),
+  ADD CONSTRAINT `records_ibfk_1` FOREIGN KEY (`service_id`) REFERENCES `services` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `records_ibfk_2` FOREIGN KEY (`master_id`) REFERENCES `masters` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `records_ibfk_3` FOREIGN KEY (`client_id`) REFERENCES `clients` (`id`) ON DELETE CASCADE,
   ADD CONSTRAINT `records_ibfk_4` FOREIGN KEY (`status_record_id`) REFERENCES `status_record` (`id`);
 
 --
